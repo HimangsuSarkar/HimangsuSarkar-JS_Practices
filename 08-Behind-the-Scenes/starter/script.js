@@ -71,13 +71,13 @@
 //   console.log("all products deleted");
 // }
 
-// var x = 1;
-// let y = 2;
-// const z = 3;
+var x = 1;
+let y = 2;
+const z = 3;
 
-// console.log(x === window.x);
-// console.log(y === window.y);
-// console.log(z=== window.z);
+console.log(x === window.x);
+console.log(y === window.y);
+console.log(z=== window.z);
 
 console.log(this);
 
@@ -111,3 +111,42 @@ matilda.calcAge = jonas.calcAge;
 
 matilda.calcAge();
 
+var firstName = 'matilda';
+
+// const jonas = {
+//   firstName:'jonas',
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+
+//     // const self = this;
+//     //  const isMillennial = function () {
+//     //   console.log(this.year >= 1986 && this.year <= 1996);
+//     // };
+    
+//      const isMillennial = ()=> {
+//       console.log(this.year >= 1986 && this.year <= 1996);
+//     };
+//     isMillennial()
+    
+//   },
+
+//   greet:()=>{
+//      console.log(this);
+//     console.log(this.firstName);
+//   },
+// }
+
+// jonas.calcAge();
+// // console.log(this.firstName);
+
+// const addExpr = function (a,b) {
+//   console.log( arguments);
+//   return a + b;
+// }
+// console.log(addExpr(2,5));
+// console.log(addExpr(2, 5, 3, 5, 5));
+
+
+// const addArrow = (a, b) => a + b;
