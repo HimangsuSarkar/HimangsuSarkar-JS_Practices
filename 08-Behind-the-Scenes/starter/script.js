@@ -71,47 +71,47 @@
 //   console.log("all products deleted");
 // }
 
-var x = 1;
-let y = 2;
-const z = 3;
+// var x = 1;
+// let y = 2;
+// const z = 3;
 
-console.log(x === window.x);
-console.log(y === window.y);
-console.log(z=== window.z);
+// console.log(x === window.x);
+// console.log(y === window.y);
+// console.log(z=== window.z);
 
-console.log(this);
+// console.log(this);
 
-const calcAge=function (birthYear) {
-  console.log(2022 - birthYear);
-  console.log(this);
-}
+// const calcAge=function (birthYear) {
+//   console.log(2022 - birthYear);
+//   console.log(this);
+// }
 
-calcAge(1991);
+// calcAge(1991);
 
-const calcAgeArrow=(birthYear)=> {
-  console.log(2022 - birthYear);
-  console.log(this);
-}
-calcAgeArrow(1997);
+// const calcAgeArrow=(birthYear)=> {
+//   console.log(2022 - birthYear);
+//   console.log(this);
+// }
+// calcAgeArrow(1997);
 
-const jonas = {
-  year: 1991,
-  calcAge: function () {
-    console.log(this);
-    console.log(2037 - this.year);
-  }
+// const jonas = {
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   }
 
-}
-jonas.calcAge();
+// }
+// jonas.calcAge();
 
-const matilda={
-  year:2022,
-}
-matilda.calcAge = jonas.calcAge;
+// const matilda={
+//   year:2022,
+// }
+// matilda.calcAge = jonas.calcAge;
 
-matilda.calcAge();
+// matilda.calcAge();
 
-var firstName = 'matilda';
+// var firstName = 'matilda';
 
 // const jonas = {
 //   firstName:'jonas',
@@ -150,3 +150,20 @@ var firstName = 'matilda';
 
 
 // const addArrow = (a, b) => a + b;
+
+
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  firstName:'jonas',
+  age:30,
+}
+
+const friend = me;
+friend.age = 27;
+console.log(friend);
+console.log(me)
