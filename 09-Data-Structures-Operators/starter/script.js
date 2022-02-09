@@ -28,21 +28,47 @@ const restaurant = {
   },
 };
 
-const arr = [2, 3, 4];
-const a = arr[0];
-const b = arr[1];
-const c = arr[2];
-console.log(a, b, c);
+//object destructing
 
-const [x, y, z] = arr;
-console.log(x, y, z);
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
 
-let [main, , secondary] = restaurant.categories;
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags } = restaurant;
+console.log(restaurantName, hours, tags);
+
+//default values
+const { menu= [], starterMenu: starter = [] } = restaurant
+
+console.log(menu,starter);
+  
+//mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+
+({ a, b } = obj)
+console.log(a,b);
+
+//array destructuring
+
+// const arr = [2, 3, 4];
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
+// console.log(a, b, c);
+
+// const [x, y, z] = arr;
+// console.log(x, y, z);
+
+// let [main, , secondary] = restaurant.categories;
 
 
-// const temp = main;
-// main = secondary;
-// secondary = temp;
+// // const temp = main;
+// // main = secondary;
+// // secondary = temp;
 
-[main, secondary] = [secondary, main];
-console.log(main, secondary);
+// [main, secondary] = [secondary, main];
+// console.log(main, secondary);
