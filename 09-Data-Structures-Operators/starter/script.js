@@ -26,23 +26,40 @@ const restaurant = {
       close: 24,
     },
   },
+
+  orderDelivery: function ({address='Van del sole ,21',time='22:00',mainIndex=1,starterIndex}) {
+   console.log(`oder delivered ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be send ${address} at ${time}`);
+ }
 };
 
+restaurant.orderDelivery({
+  time: "23:00",
+  address: 'Van del sole ,21',
+  mainIndex: 2,
+  starterIndex:2,
+  
+})
+
+restaurant.orderDelivery({
+  
+  starterIndex:2,
+  
+})
 //object destructing
 
 const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// console.log(name, openingHours, categories);
 
 const {
   name: restaurantName,
   openingHours: hours,
   categories: tags } = restaurant;
-console.log(restaurantName, hours, tags);
+// console.log(restaurantName, hours, tags);
 
 //default values
 const { menu= [], starterMenu: starter = [] } = restaurant
 
-console.log(menu,starter);
+// console.log(menu,starter);
   
 //mutating variables
 let a = 111;
@@ -50,7 +67,11 @@ let b = 999;
 const obj = { a: 23, b: 7, c: 14 };
 
 ({ a, b } = obj)
-console.log(a,b);
+// console.log(a, b);
+
+//Nested object
+const { fri:{open:o,close:c} } = openingHours;
+console.log(o,c);
 
 //array destructuring
 
