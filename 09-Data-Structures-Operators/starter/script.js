@@ -31,47 +31,76 @@ const restaurant = {
    console.log(`oder delivered ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be send ${address} at ${time}`);
  }
 };
+//spread  operator
+const arr = [7, 8, 9]
+const badArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badArr);
 
-restaurant.orderDelivery({
-  time: "23:00",
-  address: 'Van del sole ,21',
-  mainIndex: 2,
-  starterIndex:2,
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+//copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
+const menu = [restaurant.starterMenu,...restaurant.mainMenu];
+console.log(menu)
+
+//Iterable :arrays,string,maps, but not object
+
+const str = 'Jonas';
+const letter = [...str, " ", "S."];
+console.log(letter);
+
+console.log(...str);
+
+// console.log(`${...str}`)
+
+// restaurant.orderDelivery({
+//   time: "23:00",
+//   address: 'Van del sole ,21',
+//   mainIndex: 2,
+//   starterIndex:2,
   
-})
+// })
 
-restaurant.orderDelivery({
+// restaurant.orderDelivery({
   
-  starterIndex:2,
+//   starterIndex:2,
   
-})
-//object destructing
+// })
+// //object destructing
 
-const { name, openingHours, categories } = restaurant;
-// console.log(name, openingHours, categories);
+// const { name, openingHours, categories } = restaurant;
+// // console.log(name, openingHours, categories);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags } = restaurant;
-// console.log(restaurantName, hours, tags);
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags } = restaurant;
+// // console.log(restaurantName, hours, tags);
 
-//default values
-const { menu= [], starterMenu: starter = [] } = restaurant
+// //default values
+// const { menu= [], starterMenu: starter = [] } = restaurant
 
-// console.log(menu,starter);
+// // console.log(menu,starter);
   
-//mutating variables
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
+// //mutating variables
+// let a = 111;
+// let b = 999;
+// const obj = { a: 23, b: 7, c: 14 };
 
-({ a, b } = obj)
-// console.log(a, b);
+// ({ a, b } = obj)
+// // console.log(a, b);
 
-//Nested object
-const { fri:{open:o,close:c} } = openingHours;
-console.log(o,c);
+// //Nested object
+// const { fri:{open:o,close:c} } = openingHours;
+// console.log(o,c);
 
 //array destructuring
 
